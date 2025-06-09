@@ -45,9 +45,13 @@ console.log(numeriPari)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
 // const sommaArray = arrayDiNumeri.forEach((numero) => {
-//   const somma = somma + numero
-//   return somma
+//   if (numero > 0) {
+//     return numero + numero
+//   } else {
+//     return 'numero non sommato'
+//   }
 // })
+// console.log(sommaArray)
 // Ho messo il let per capire il meccaniscmo di for.Each, ma niente da fare
 // let somma = 0
 // for (let i = 0; i < arrayDiNumeri.length; i++) {
@@ -63,21 +67,35 @@ console.log(numeriPari)
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
 */
 const arrayIncrementati = arrayDiNumeri.map((numero1) => {
-  for (let i = 0; i < arrayDiNumeri.length; i++) {
-    const somma = arrayDiNumeri[i] + numero1
-    return somma
-  }
+  return numero1 + 1
 })
-const sumArray = numero1(5)
-console.log(somma)
+
+console.log(arrayIncrementati)
+
 /* ESERCIZIO 7 (map)
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
 
+const arraydiStringhe = ['Fa caldo', 'JavaScript', 'Pazzia']
+const lunghezza = arraydiStringhe.map((stringa) => {
+  return stringa.length
+})
+
+console.log(lunghezza)
+
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
+// const arrayDispari = []
+// const creazioneArrayDisp = () => {
+//   for (let i = 1; i <= 99; i++) {
+//     if (i % 2 !== 0) {
+//       return arrayDispari.push(i)
+//     }
+//   }
+// }
+// console.log(arrayDispari)
 
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
@@ -196,8 +214,9 @@ const movies = [
 ]
 
 /* ESERCIZIO 9 (forEach)
-  Scrivi una funzione per trovare il film più vecchio nell'array fornito.
+  Scrivi una funzione per trovare il film più vecchio nell'array fornito. (1963 data più vecchia)
 */
+const trovaFilmVecchio = movies.forEach((data) => {})
 
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
